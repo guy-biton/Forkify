@@ -1,0 +1,4 @@
+# Ignore build/caches everywhere
+**/node_modules/
+**/dist/
+**/.parcel-cache/
