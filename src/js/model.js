@@ -18,7 +18,6 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
 
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
-    console.log(data);
 
     state.search.results = data.data.recipes.map(rec => {
       return {
@@ -52,7 +51,6 @@ export const loadRecipe = async function (id) {
       ingredients: recipe.ingredients,
       key: recipe.key || undefined,
     };
-    console.log(state.recipe);
 
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
@@ -87,7 +85,6 @@ export const addBookmark = function (recipe) {
 
   //Mark current recipe as bookmark
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
-  console.log(state.recipe.bookmarked);
   presistBookmarks();
 };
 
@@ -152,8 +149,7 @@ export const uploadRecipe = async function (newRecipe) {
       bookmarked: true,
       key: uploadedRecipe.key,
     };
-    addBookmark(state.recipe);
-    console.log(data);
+    addBookmark(state.recipe);1
   } catch (err) {
     throw err;
   }
