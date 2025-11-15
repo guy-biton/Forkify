@@ -2,6 +2,8 @@
   publish = "dist"
   command = "npm run build"
 
+# Redirect all non-asset requests to index.html for SPA routing
+# Note: Netlify automatically serves existing files (like .svg, .js, .css) before applying redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
