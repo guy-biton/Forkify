@@ -8,7 +8,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist --public-url /"
+    "build": "parcel build index.html --dist-dir"
   },
   "dependencies": {
     "core-js": "^3.46.0",

@@ -1,5 +1,4 @@
-
-import icons from '../../img/icons.svg';
+import icons from 'url:../../img/icons.svg';
 
 export const generateMarkupPreview = function (preview) {
   const id = window.location.hash.slice(1);
