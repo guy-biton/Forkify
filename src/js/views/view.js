@@ -1,4 +1,5 @@
 import icons from 'url:../../img/icons.svg';
+import icons from 'url:../../src/img/icons.svg';
 
 export default class View {
   _data;
@@ -6,7 +7,7 @@ export default class View {
   _errorMessage = 'Something went wrong!';
   _message = '';
 
-  render(data,render = true) {
+  render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
     this._data = data;
